@@ -15,7 +15,7 @@ class config():
     record_path  = output_path + "monitor/"
 
     # model and training config
-    load_path         = "weights/model.weights_step=2000000"
+    #load_path         = "results/q6_train_atari_nature/model.weights"
     num_episodes_test = 50
     grad_clip         = True
     clip_val          = 10

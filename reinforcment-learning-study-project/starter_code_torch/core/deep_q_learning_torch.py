@@ -93,9 +93,10 @@ class DQN(QN):
         if hasattr(self.config, 'load_path'):
             print('Loading parameters from file:', self.config.load_path)
             load_path = Path(self.config.load_path)
-            assert load_path.is_file(), f'Provided load_path ({load_path}) does not exist'
+            #assert load_path.is_file(), f'Provided load_path ({load_path}) does not exist'
             self.q_network.load_state_dict(torch.load(load_path, map_location='cpu'))
             print('Load successful!')
+            '''if False: pass'''
         else:
             print('Initializing parameters randomly')
             def init_weights(m):
